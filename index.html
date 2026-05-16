@@ -71,7 +71,7 @@
 </script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap');
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -106,7 +106,7 @@
   /* ── Nav ── */
   .nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    padding: 0 40px; height: 80px;
+    padding: 0 40px; height: 100px;
     display: flex; align-items: center; justify-content: space-between;
     transition: var(--transition);
   }
@@ -116,14 +116,14 @@
     box-shadow: 0 1px 0 rgba(0,0,0,.05);
   }
   .nav-logo {
-    font-family: 'Ma Shan Zheng', 'Noto Sans SC', cursive;
+    font-family: 'Zhi Mang Xing', 'Noto Sans SC', cursive;
     font-size: 52px; color: var(--primary);
     letter-spacing: 4px; text-decoration: none; line-height: 1;
   }
   .nav-phone {
-    font-size: 18px; font-weight: 800; color: #e74c3c;
-    text-decoration: none; margin-left: 16px; letter-spacing: 1px;
-    transition: var(--transition);
+    font-size: 52px; font-weight: 900; color: #e74c3c;
+    text-decoration: none; margin-left: 24px; letter-spacing: 2px;
+    transition: var(--transition); line-height: 1;
   }
   .nav-phone:hover { color: #c0392b; }
   .nav-links { display: flex; gap: 36px; list-style: none; }
@@ -419,6 +419,9 @@
 
   /* ── Responsive ── */
   @media (max-width: 1024px) {
+    .nav { padding: 0 24px; height: 80px; }
+    .nav-logo { font-size: 36px; }
+    .nav-phone { font-size: 28px; }
     .products-grid { grid-template-columns: repeat(2, 1fr); max-width: 760px; }
     .features-grid { grid-template-columns: repeat(2, 1fr); }
     .hero-visual { display: none; }
@@ -427,7 +430,9 @@
     .stats { grid-template-columns: repeat(2, 1fr); }
   }
   @media (max-width: 768px) {
-    .nav { padding: 0 20px; }
+    .nav { padding: 0 16px; height: 72px; }
+    .nav-logo { font-size: 28px; letter-spacing: 2px; }
+    .nav-phone { font-size: 20px; font-weight: 800; margin-left: 8px; }
     .nav-links { display: none; }
     .hero { padding: 100px 20px 60px; }
     .hero h1 { font-size: 34px; }
