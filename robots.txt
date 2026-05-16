@@ -1,0 +1,13 @@
+User-agent: Baiduspider
+Allow: /
+Disallow: /images/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /images/
+
+User-agent: *
+Allow: /
+Disallow: /images/
+
+Sitemap: https://www.taoli001.cn/sitemap.xml
