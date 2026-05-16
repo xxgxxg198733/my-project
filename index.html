@@ -196,7 +196,31 @@
   }
 
   /* ── Section shared ── */
-  section { padding: 100px 40px; }
+  section { padding: 100px 40px; position: relative; overflow: hidden; }
+  section::before {
+    content: ''; position: absolute; inset: 0; z-index: 0;
+    background-size: cover; background-position: center;
+    opacity: .06; filter: blur(6px);
+  }
+  /* 每个板块用不同的陶粒图做背景 */
+  #products::before { background-image: url(images/products/taoli-garden.jpg); }
+  #products .section-header, #products .products-grid { position: relative; z-index: 1; }
+
+  #scenes::before { background-image: url(images/products/taoli-construction.jpg); }
+  #scenes .section-header, #scenes .scenes-grid { position: relative; z-index: 1; }
+
+  #features::before { background-image: url(images/products/taoli-filter.jpg); }
+  #features .section-header, #features .features-grid { position: relative; z-index: 1; }
+
+  #contact::before { background-image: url(images/products/taoli-fireproof.jpg);
+    opacity: .04; filter: blur(8px); }
+  #contact .reveal { position: relative; z-index: 1; }
+
+  .service-areas::before { background-image: url(images/products/taoli-garden.jpg); }
+  .service-areas h3, .service-areas p { position: relative; z-index: 1; }
+
+  /* hero 保留原有渐变 */
+  .hero::before { all: unset; content: none; }
   .section-header { text-align: center; margin-bottom: 64px; }
   .section-tag {
     display: inline-block; padding: 6px 18px; background: rgba(200,146,75,.12);
