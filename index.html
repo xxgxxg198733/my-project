@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="九天建材 - 优质陶粒厂家直销，提供建筑陶粒、园艺陶粒、水处理滤料陶粒、耐火保温陶粒。轻骨料混凝土、屋顶绿化、无土栽培、污水处理多场景应用。页岩陶粒、黏土陶粒全品类覆盖，全国配送。">
-<meta name="keywords" content="九天建材,陶粒,建筑陶粒,园艺陶粒,滤料陶粒,保温陶粒,页岩陶粒,黏土陶粒,轻骨料,轻骨料混凝土,陶粒厂家,陶粒价格,陶粒批发,陶粒供应商,屋顶绿化,无土栽培,水处理滤料,陶粒混凝土,耐火保温,屋面保温,楼地面垫层,园林绿化,盆栽垫层,鱼菜共生,生物滤池,人工湿地,卫生间回填,沉箱回填,陶粒回填,轻质回填材料,环保回填">
+<meta name="keywords" content="九天建材,陶粒,建筑陶粒,园艺陶粒,滤料陶粒,保温陶粒,页岩陶粒,黏土陶粒,轻骨料,陶粒厂家,陶粒价格,陶粒批发,陶粒供应商,四川陶粒,成都陶粒,重庆陶粒,绵阳陶粒,德阳陶粒,宜宾陶粒,南充陶粒,泸州陶粒,达州陶粒,乐山陶粒,内江陶粒,自贡陶粒,眉山陶粒,遂宁陶粒,广安陶粒,攀枝花陶粒,广元陶粒,资阳陶粒,雅安陶粒,巴中陶粒,凉山陶粒,万州陶粒,涪陵陶粒,黔江陶粒,合川陶粒,永川陶粒,四川陶粒批发,重庆陶粒批发,成都陶粒价格,重庆陶粒价格,成都陶粒厂家,重庆陶粒厂家">
 <meta name="author" content="九天建材">
 <meta name="baidu-site-verification" content="codeva-0mmkCWIDOY" />
 <meta name="robots" content="index, follow">
@@ -317,6 +317,74 @@
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s ease; }
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
+  /* ── Floating phone ── */
+  .float-phone {
+    position: fixed; bottom: 32px; right: 32px; z-index: 999;
+    width: 60px; height: 60px; border-radius: 50%;
+    background: #e74c3c; color: #fff; display: flex; align-items: center;
+    justify-content: center; text-decoration: none;
+    box-shadow: 0 6px 24px rgba(231,76,60,.4);
+    animation: pulse 2s infinite; transition: var(--transition);
+  }
+  .float-phone:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(231,76,60,.5); }
+  .float-phone .icon { font-size: 28px; animation: ring 1.5s ease-in-out infinite; }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 6px 24px rgba(231,76,60,.4); }
+    50% { box-shadow: 0 6px 40px rgba(231,76,60,.7); }
+  }
+  @keyframes ring {
+    0%, 100% { transform: rotate(0); }
+    10% { transform: rotate(15deg); }
+    20% { transform: rotate(-15deg); }
+    30% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    50% { transform: rotate(0); }
+  }
+  .float-phone-tip {
+    position: fixed; bottom: 100px; right: 32px; z-index: 999;
+    background: #fff; color: #e74c3c; padding: 8px 16px; border-radius: 8px;
+    font-size: 14px; font-weight: 700; white-space: nowrap;
+    box-shadow: var(--shadow); pointer-events: none;
+    animation: fadeInOut 3s ease forwards;
+  }
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  /* 手机端底部条 */
+  .mobile-cta-bar {
+    display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 998;
+    background: #fff; padding: 12px 16px; box-shadow: 0 -2px 12px rgba(0,0,0,.08);
+    justify-content: center; gap: 16px; align-items: center;
+  }
+  .mobile-cta-bar .btn-phone {
+    background: #e74c3c; color: #fff; padding: 12px 32px; border-radius: 50px;
+    font-weight: 700; font-size: 16px; text-decoration: none; letter-spacing: 1px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .mobile-cta-bar .btn-email {
+    background: #fff; color: var(--primary); padding: 12px 24px; border-radius: 50px;
+    font-weight: 600; font-size: 14px; text-decoration: none;
+    border: 2px solid var(--primary);
+  }
+  @media (max-width: 768px) {
+    .mobile-cta-bar { display: flex; }
+    .float-phone { display: none; }
+    body { padding-bottom: 80px; }
+  }
+
+  /* ── Service areas ── */
+  .service-areas {
+    padding: 60px 40px 80px; text-align: center; background: var(--bg);
+  }
+  .service-areas h3 { font-size: 22px; color: var(--primary); margin-bottom: 16px; }
+  .service-areas p {
+    max-width: 900px; margin: 0 auto; font-size: 13px; color: var(--text-light);
+    line-height: 2.2;
+  }
+
   /* ── Responsive ── */
   @media (max-width: 1024px) {
     .products-grid { grid-template-columns: repeat(2, 1fr); max-width: 760px; }
@@ -612,6 +680,28 @@
   }, { threshold: .5 });
   document.querySelectorAll('[data-count]').forEach(el => countObserver.observe(el));
 </script>
+<!-- Floating phone -->
+<a href="tel:19008096839" class="float-phone" title="立即电话咨询">
+  <span class="icon">&#9742;</span>
+</a>
+<div class="float-phone-tip">电话咨询 →</div>
+
+<!-- Mobile CTA bar -->
+<div class="mobile-cta-bar">
+  <a href="tel:19008096839" class="btn-phone">&#9742; 19008096839</a>
+  <a href="mailto:xxgxxg198733@gmail.com" class="btn-email">发邮件</a>
+</div>
+
+<!-- Service Areas -->
+<section class="service-areas">
+  <h3>服务区域</h3>
+  <p>
+    四川：成都陶粒、绵阳陶粒、德阳陶粒、宜宾陶粒、南充陶粒、泸州陶粒、达州陶粒、乐山陶粒、内江陶粒、自贡陶粒、眉山陶粒、遂宁陶粒、广安陶粒、攀枝花陶粒、广元陶粒、资阳陶粒、雅安陶粒、巴中陶粒、凉山陶粒、甘孜陶粒、阿坝陶粒<br>
+    重庆：万州陶粒、涪陵陶粒、黔江陶粒、长寿陶粒、江津陶粒、合川陶粒、永川陶粒、南川陶粒、綦江陶粒、大足陶粒、璧山陶粒、铜梁陶粒、潼南陶粒、荣昌陶粒、开州陶粒、梁平陶粒、武隆陶粒、城口陶粒、丰都陶粒、垫江陶粒、忠县陶粒、云阳陶粒、奉节陶粒、巫山陶粒、巫溪陶粒、石柱陶粒、秀山陶粒、酉阳陶粒、彭水陶粒<br>
+    四川陶粒批发、重庆陶粒批发、成都陶粒价格、重庆陶粒价格、四川陶粒厂家、重庆陶粒厂家 —— 九天建材，覆盖川渝，就近配送，欢迎来电咨询 19008096839。
+  </p>
+</section>
+
 <!-- 百度自动推送 -->
 <script>
 (function(){
